@@ -1,0 +1,28 @@
+<div class="flex h-screen">
+  <div class="w-[300px] bg-gray-100 h-full p-5 border-r border-gray-300">
+    <p>Aside component</p>
+    <pre>{{ type$ | async | json }}</pre>
+
+    <!-- Company -->
+    @if (company$ | async; as company) {
+    <!-- You can use different components for showing list with selection elements how we discussed -->
+    <pre>{{ company | json }}</pre>
+    }
+
+    <!-- Suburb -->
+    @if (suburb$ | async; as suburb) {
+    <!-- You can use different components for showing list with selection elements how we discussed -->
+    <pre>{{ suburb | json }}</pre>
+    }
+
+    <!-- persona -->
+    @if (persona$ | async; as persona) {
+    <!-- You can use different components for showing list with selection elements how we discussed -->
+    <pre>{{ persona | json }}</pre>
+    }
+  </div>
+  <div class="basis-4/5 h-full">
+    <h3 class="mb-3">Entity</h3>
+    <router-outlet></router-outlet>
+  </div>
+</div>
